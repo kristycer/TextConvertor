@@ -41,9 +41,6 @@ class MyString extends React.Component {
 
     return (
       <div className="outer">
-        <article className="about_content">
-          {self.state.name ? <p>{convert(self.state.name)}</p> : null}
-        </article>
         <div>
           <div>
             <label className="c-label" htmlFor="name_field">
@@ -58,6 +55,9 @@ class MyString extends React.Component {
             onChange={self.updateName.bind(self)}
           />
         </div>
+        <article className="about_content">
+          {self.state.name ? <p>{convert(self.state.name)}</p> : null}
+        </article>
       </div>
     )
   }
