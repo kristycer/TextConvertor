@@ -1,4 +1,4 @@
-import React, { Component, TouchableOpacity, Text } from 'react'
+import React, { Component } from 'react'
 
 function convert(str) {
   let myList = str
@@ -23,9 +23,8 @@ class MyString extends React.Component {
 
     let self = this
 
-    // Set our initial reactive state values
     self.state = {
-      name: 'Ahoj',
+      name: 'I will reverse',
     }
   }
 
@@ -42,21 +41,20 @@ class MyString extends React.Component {
 
     return (
       <div className="outer">
-        <article className="about__content">
+        <article className="about_content">
           {self.state.name ? <p>{convert(self.state.name)}</p> : null}
         </article>
-
         <div>
-          <label className="c-label" htmlFor="name_field">
-            String to Reverse
-          </label>
-
+          <div>
+            <label className="c-label" htmlFor="name_field">
+              String to Reverse
+            </label>
+          </div>
           <input
             className="c-input-field"
             type="text"
             id="name_field"
             value={self.state.name}
-            placeholderTextColor="#003f5c"
             onChange={self.updateName.bind(self)}
           />
         </div>
