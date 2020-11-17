@@ -1,6 +1,6 @@
 # Text Convertor App
 
-# How to run
+How to run the app:
 
 ## `npm install`
 
